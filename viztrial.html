@@ -1,0 +1,21 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Embedded Analytics with Tableau</title>
+  
+</head>
+<body>
+  <div id="vizContainer"></div>
+  <script src="https://prod-apsoutheast-a.online.tableau.com/javascripts/api/viz_v1.js"></script>
+  <script>
+    var viz
+    function initViz() {
+      var containerDiv = document.getElementById("vizContainer"),
+      url = "https://public.tableau.com/profile/nazmul.kaonine#!/vizhome/CovidVaccines_15975148438620/Dashboard1"
+    //   url = "https://us-east-1.online.tableau.com/t/zuar/views/Regional/GlobalTemperatures";
+      viz = new tableau.Viz(containerDiv, url);
+    }
+    initViz();
+  </script>
